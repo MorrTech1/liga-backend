@@ -549,7 +549,8 @@ footer {
    }
 
    .hero-banner {
-    height: 50vh;
+    height: 40vh;
+    background-attachment: scroll;
    }
     .hero-banner h1 {
       font-size: 24px;
