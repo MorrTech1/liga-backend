@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nombre": "Jaguares",
+    "categoriaId": 1
+  },
+  {
+    "id": 1770380272427,
+    "nombre": "diamante",
+    "categoriaId": 1,
+    "logo": "/uploads/equipos/1770380272420.jpg"
+  },
+  {
+    "id": 1770463966649,
+    "nombre": "atletico",
+    "categoriaId": 2,
+    "logo": "/uploads/equipos/1770463966648.png"
+  },
+  {
+    "id": 1770464166571,
+    "nombre": "barcelona",
+    "categoriaId": 2,
+    "logo": null
+  },
+  {
+    "id": 1770630279895,
+    "nombre": "Brasil",
+    "categoriaId": 3,
+    "logo": null
+  },
+  {
+    "id": 1770630290535,
+    "nombre": "Mexico",
+    "categoriaId": 3,
+    "logo": null
+  }
+]

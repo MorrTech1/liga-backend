@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Panel Admin</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="icon" href="imagenes/diamante.jpg">
+</head>
+<body>
+     <div id="loginContainer">
+
+       <!-- LOGIN -->
+       <section>
+         <h2>🔐 Iniciar Sesión </h2>
+         <input id="email" placeholder="Email">
+         <input id="password" type="password" placeholder="Password">
+         <button onclick="login()">Ingresar</button>
+        </section>
+      </div>
+
+<div class="admin-layout" id="adminLayout" style="display:none;">
+
+      <aside class="admin-sidebar" id="adminSidebar"> 
+        <div class="sidebar-top">
+
+          <h1 class="admin-logo">⚙️ Panel Administrador</h1>
+
+          <nav class="menu-lateral">
+            <button onclick="mostrarSeccion('Categorias')">CATEGORIAS</button>
+            <button onclick="mostrarSeccion('Equipos')">EQUIPOS</button>
+            <button onclick="mostrarSeccion('Jugadores')">JUGADORES</button>
+            <button onclick="mostrarSeccion('Partidos')">PARTIDOS</button>
+          </nav>
+        </div>
+
+            <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+
+      </aside>
+
+      <div class="admin-main">
+        <header class="admin-topbar">
+          <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+          <h1> ⚙️ Panel Admin</h1>
+        </header>
+        
+        <main class="admin-contenido">
+          
+          <section id="seccionCategorias" class="seccion-admin">
+          <div class="card-admin">
+            <div class="form-row">
+              <h2>📂 Categorías</h2>
+              
+              <input id="nombreCategoria" placeholder="Nombre de la categoría">
+              <button onclick="crearCategoria()">Crear categoría</button>
+              
+              <br><br>
+              
+              <select id="categoriaEliminar"></select>
+              <button onclick="eliminarCategoria()">Eliminar categoría</button>
+            </div>
+          </div>
+        </section>
+        
+        <!-- CREAR EQUIPO -->
+          <section id="seccionEquipos" class="seccion-admin">
+            <div class="card-admin">
+              <div class="form-row">
+
+                   <h2 id="crearEquipo">➕ Crear Equipo</h2>
+                   
+                   <input id="nombreEquipo" placeholder="Nombre del equipo">
+                   
+                   <select id="categoriaEquipo"></select>
+
+                   <input type="file" id="logoEquipo" accept="image/*">
+                   
+                   <button onclick="crearEquipo()">Crear equipo</button>
+                   
+                   <section>
+                     <h2>🗑️ Eliminar Equipo</h2>
+                     <select id="equipoEliminar"></select>
+                     <button onclick="eliminarEquipo()">Eliminar equipo</button>
+                    </section>
+
+
+                  </div>
+                  
+                </div>
+              </section>
+              
+              <section id="seccionJugadores" class="seccion-admin">
+                <div class="card-admin">
+                  <div class="form-row">
+                    <h2>👤 Gestión de Jugadores</h2>
+                    
+                    <!-- Crear jugador -->
+                    <input id="nombreJugador" placeholder="Nombre del jugador">
+                    <select id="equipoJugador"></select>
+                    <button onclick="crearJugador()">Crear jugador</button>
+                    
+                    <hr>
+      
+                    <!-- Editar jugador -->
+                    <select id="jugadorEditar"></select>
+        <select id="equipoEditarJugador"></select>
+       <button onclick="editarJugador()">Cambiar equipo</button>
+      
+       <hr>
+       
+       <!-- Eliminar jugador -->
+       <select id="jugadorEliminar"></select>
+       <button onclick="eliminarJugador()">Eliminar jugador</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CREAR PARTIDO -->
+  
+  <section id="seccionPartidos" class="seccion-admin">
+    <div class="card-admin">
+      <div class="form-row">
+        <h2 id="partidos">⚽ Crear Partido</h2>
+        <p>Selecionar equipos</p>
+        <select id="equipoLocal"></select>
+        <select id="equipoVisitante"></select>
+        <p>Seleccionar categoria</p>
+        <select id="categoriaPartido"></select>
+        <p>Seleccionar fecha</p>
+        <input id="fecha" type="date">
+        <input id="hora" type="time">
+        <input type="number" id="jornadaPartido" placeholder="Jornada" min="1">
+        
+        <button onclick="crearPartido()">Crear partido</button>
+        
+        <section>
+          <h2>✏️ Editar Partido</h2>
+          
+          <select id="partidoEditar"></select>
+        <input type="date" id="editarFecha">
+        <input type="time" id="editarHora">
+        
+        <button onclick="editarPartido()">Guardar cambios</button>
+      </section>
+      
+      
+      <!-- REGISTRAR RESULTADO -->
+      <section>
+        <h2>Registrar resultado</h2>
+        
+        <select id="partidoId"></select>
+        
+        <input type="number" id="golesLocal" placeholder="Goles local">
+        <input type="number" id="golesVisitante" placeholder="Goles visitante">
+        
+        <div id="goleadoresContainer"></div>
+        <button onclick="agregarGoleador()">➕ Agregar goleador</button>
+        
+        <button onclick="registrarResultado()">Registrar resultado</button>
+        
+      </section>
+      <!-- ELIMINAR EQUIPO O PARTIDO -->
+      
+         <section>
+           <h2>🗑️ Eliminar Partido</h2>
+           <select id="partidoEliminar"></select>
+           <button onclick="eliminarPartido()">Eliminar partido</button>
+         </section>
+      </div>  
+    </div>
+  </section> 
+
+   </main>
+</div>
+</div>
+
+
+
+<script src="admin.js"></script>
+</body>
+</html>

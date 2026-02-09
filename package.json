@@ -1,0 +1,21 @@
+{
+  "name": "liga-backend",
+  "version": "1.0.0",
+  "description": "backend-liga",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "license": "ISC",
+  "author": "MorrTech",
+  "type": "commonjs",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.0.2"
+  }
+}
