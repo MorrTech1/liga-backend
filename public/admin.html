@@ -8,6 +8,7 @@
   <title>Panel Admin</title>
   <link rel="stylesheet" href="admin.css">
   <link rel="icon" href="imagenes/diamante.jpg">
+  
 </head>
 <body>
      <div id="loginContainer">
@@ -81,7 +82,10 @@
                    
                    <section>
                      <h2>🗑️ Eliminar Equipo</h2>
-                     <select id="equipoEliminar"></select>
+
+                     <input id="buscarEquipoEliminar" placeholder="Buscar equipo.." type="text">
+                     <div id="listaEquipoEliminar" class="lista-buscador"></div>
+
                      <button onclick="eliminarEquipo()">Eliminar equipo</button>
                     </section>
 
@@ -111,7 +115,9 @@
        <hr>
        
        <!-- Eliminar jugador -->
-       <select id="jugadorEliminar"></select>
+      <input type=" text" id="buscarJugadorEliminar" placeholder="Buscar Jugador">
+      <div id="listaJugadorEliminar" class="lista-buscador"></div>
+
        <button onclick="eliminarJugador()">Eliminar jugador</button>
       </div>
     </div>
@@ -122,50 +128,67 @@
   <section id="seccionPartidos" class="seccion-admin">
     <div class="card-admin">
       <div class="form-row">
-        <h2 id="partidos">⚽ Crear Partido</h2>
-        <p>Selecionar equipos</p>
-        <select id="equipoLocal"></select>
-        <select id="equipoVisitante"></select>
-        <p>Seleccionar categoria</p>
-        <select id="categoriaPartido"></select>
-        <p>Seleccionar fecha</p>
-        <input id="fecha" type="date">
-        <input id="hora" type="time">
-        <input type="number" id="jornadaPartido" placeholder="Jornada" min="1">
-        
-        <button onclick="crearPartido()">Crear partido</button>
+        <section>
+
+          <h2 id="partidos">⚽ Crear Partido</h2>
+          <p>Selecionar equipos</p>
+          
+          <input id="buscarLocal" placeholder="Equipo Local" type="text">
+          <div class="lista-buscador" id="listaLocal"></div>
+          
+          <input id="buscarVisitante" placeholder="Equipo Visitante" type="text">
+          <div class="lista-buscador" id="listaVisitante"></div>
+          
+          <p>Seleccionar categoria</p>
+          
+          <select id="categoriaPartido"></select>
+          
+          <p>Seleccionar fecha</p>
+          
+          <input id="fecha" type="date">
+          <input id="hora" type="time">
+          <input type="number" id="jornadaPartido" placeholder="Jornada" min="1">
+          
+          <button onclick="crearPartido()">Crear partido</button>
+        </section>
         
         <section>
-          <h2>✏️ Editar Partido</h2>
-          
-          <select id="partidoEditar"></select>
-        <input type="date" id="editarFecha">
-        <input type="time" id="editarHora">
-        
-        <button onclick="editarPartido()">Guardar cambios</button>
-      </section>
+          <h2>Seleccionar Partido</h2>
+
+            <h3>Categoría</h3>
+            <select id="categoriaResultado"></select>
+
+           <h3>Jornada</h3>
+          <select id="jornadaResultado" disabled></select>
+
+             <h3>Partido</h3>
+          <select id="partidoId" disabled></select>
+
+             <div id="infoPartido" class="info-partido" >
+               <p id="infoFecha"></p>
+               <p id="infoHora"></p>
+             </div>
+         
+            </section>
       
       
-      <!-- REGISTRAR RESULTADO -->
-      <section>
-        <h2>Registrar resultado</h2>
+        <!-- REGISTRAR RESULTADO -->
+         <section>
+          <h2>Registrar resultado</h2>
+          <input type="number" id="golesLocal" placeholder="Goles local">
+          <input type="number" id="golesVisitante" placeholder="Goles visitante">
         
-        <select id="partidoId"></select>
+          <div id="goleadoresContainer"></div>
+          <button onclick="agregarGoleador()">➕ Agregar goleador</button>
         
-        <input type="number" id="golesLocal" placeholder="Goles local">
-        <input type="number" id="golesVisitante" placeholder="Goles visitante">
+          <button onclick="registrarResultado()">Registrar resultado</button>
         
-        <div id="goleadoresContainer"></div>
-        <button onclick="agregarGoleador()">➕ Agregar goleador</button>
-        
-        <button onclick="registrarResultado()">Registrar resultado</button>
-        
-      </section>
+         </section>
       <!-- ELIMINAR EQUIPO O PARTIDO -->
       
          <section>
-           <h2>🗑️ Eliminar Partido</h2>
-           <select id="partidoEliminar"></select>
+           <h2>🗑️ Eliminar Partido</h2>   
+           
            <button onclick="eliminarPartido()">Eliminar partido</button>
          </section>
       </div>  

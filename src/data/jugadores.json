@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": 1,
+    "nombre": "Moroni",
+    "equipoId": 1770705799781,
+    "categoriaId": 1,
+    "goles": 4
+  },
+  {
+    "id": 2,
+    "nombre": "Jose",
+    "equipoId": 1770705845329,
+    "categoriaId": 1,
+    "goles": 6
+  }
+]

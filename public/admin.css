@@ -127,6 +127,21 @@ button:hover {
   background: #f4f6fb;
   
 }
+.info-partido {
+  margin: 10px 0;
+  padding: 5px;
+  background: #1e3a8a;
+  border-radius: 8px;
+  font-size: 14px;
+   
+   p{
+    color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+   }
+   
+}
 
 /* SIDEBAR */
 .admin-sidebar {
@@ -188,6 +203,26 @@ button:hover {
   background: #f4f6fb;
 }
 
+.lista-buscador {
+  border: 1px solid #ccc;
+  max-height: 160px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 6px;
+}
+
+.item-buscador {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.item-buscador:hover {
+  background: #f1f1f1;
+}
+
+.fila-goleador {
+  margin-bottom: 10px;
+}
 
 h1 {
   text-align: center;

@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": 1770705799781,
+    "nombre": "Jaguares",
+    "categoriaId": 1,
+    "logo": "/uploads/equipos/1770705799776.jpg"
+  },
+  {
+    "id": 1770705845329,
+    "nombre": "Diamante",
+    "categoriaId": 1,
+    "logo": "/uploads/equipos/1770705845324.jpg"
+  }
+]
