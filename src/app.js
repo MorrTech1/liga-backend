@@ -4,6 +4,13 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+const fs = require('fs');
+
+const uploadsDir = path.join(__dirname, '../public/uploads/equipos');
+
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
 
 const PORT = process.env.PORT || 3000;
 
